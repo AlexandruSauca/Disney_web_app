@@ -1,0 +1,38 @@
+# Web Application Development Task
+
+- [/] Project Setup <!-- id: 0 -->
+    - [x] Initialize Next.js project <!-- id: 1 -->
+    - [x] Configure Vanilla CSS / Design System <!-- id: 2 -->
+    - [x] Setup Database (SQLite) <!-- id: 3 -->
+    - [x] Import/Parse `disney_characters.sql` (if applicable) <!-- id: 4 -->
+- [/] Authentication <!-- id: 5 -->
+    - [x] Create Login Page <!-- id: 6 -->
+    - [x] Implement Auth Logic (Session/Cookie) <!-- id: 7 -->
+    - [x] Create Users Table <!-- id: 29 -->
+    - [x] Create Register Page <!-- id: 30 -->
+    - [x] Switch Login to Database Auth <!-- id: 31 -->
+    - [x] Restrict Public Access (Middleware) <!-- id: 32 -->
+- [x] Documentation <!-- id: 33 -->
+    - [x] Create Tech Stack & File Map document <!-- id: 34 -->
+    - [x] Create Setup/Install Guide <!-- id: 35 -->
+- [x] Backend API (Next.js API Routes) <!-- id: 8 -->
+    - [x] GET /api/characters (with pagination, search, filter) <!-- id: 9 -->
+    - [x] GET /api/characters/:id <!-- id: 10 -->
+    - [x] POST /api/characters (Create) <!-- id: 11 -->
+    - [x] PUT /api/characters/:id (Update) <!-- id: 12 -->
+    - [x] DELETE /api/characters/:id (Delete) <!-- id: 13 -->
+- [x] Control Panel (Private) <!-- id: 14 -->
+    - [x] Dashboard Layout <!-- id: 15 -->
+    - [x] Create/Edit Form (Base64 Image handling) <!-- id: 16 -->
+    - [x] List View with Delete options <!-- id: 17 -->
+- [x] Frontend (Public) <!-- id: 18 -->
+    - [x] Home/List Page <!-- id: 19 -->
+        - [x] Display Grid/List <!-- id: 20 -->
+        - [x] Pagination Components <!-- id: 21 -->
+        - [x] Search Bar <!-- id: 22 -->
+        - [x] Filter Buttons <!-- id: 23 -->
+    - [x] Detail Page <!-- id: 24 -->
+- [/] Verification <!-- id: 25 -->
+    - [x] Verify CRUD operations (Automated Build Check) <!-- id: 26 -->
+    - [ ] Verify Search/Filter/Pagination (Manual) <!-- id: 27 -->
+    - [ ] Verify Auth protection (Manual) <!-- id: 28 -->
