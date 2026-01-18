@@ -7,6 +7,8 @@ export async function GET(request) {
     const limit = parseInt(searchParams.get('limit') || '20');
     const search = searchParams.get('search') || '';
     const filter = searchParams.get('filter') || 'all'; // e.g. 'films', 'tvShows'
+    const filterType = searchParams.get('filterType') || ''; // 'films' or 'tvShows'
+    const filterTitle = searchParams.get('filterTitle') || ''; // specific film/tv show title
 
     // Fetch all data (small dataset optimization)
     const stmt = db.prepare('SELECT id, data FROM data');
@@ -29,8 +31,15 @@ export async function GET(request) {
         );
     }
 
-    if (filter !== 'all') {
-        // Example logic: if filter is 'films', check if character has films
+    if (filterType && filterTitle) {
+        // Filter by specific film or TV show
+        if (filterType === 'films') {
+            characters = characters.filter(c => c.films && c.films.includes(filterTitle));
+        } else if (filterType === 'tvShows') {
+            characters = characters.filter(c => c.tvShows && c.tvShows.includes(filterTitle));
+        }
+    } else if (filter !== 'all') {
+        // Legacy filter logic: if filter is 'films', check if character has films
         if (filter === 'films') {
             characters = characters.filter(c => c.films && c.films.length > 0);
         } else if (filter === 'tvShows') {

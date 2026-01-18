@@ -50,7 +50,7 @@ export default function AdminDashboard() {
         <div className={styles.container}>
             <header className={styles.header}>
                 <h1>Dashboard</h1>
-                <Link href="/admin/add" className="btn btn-primary">
+                <Link href="/admin/add" className="btn btn-outline btn-sm">
                     + Add New
                 </Link>
             </header>

@@ -81,8 +81,9 @@ export default function CharacterForm({ initialData = {}, isEdit = false }) {
                         value={imageUrl}
                         onChange={(e) => setImageUrl(e.target.value)}
                         className="input"
+                        style={{ display: isEdit ? 'none' : 'block' }}
                     />
-                    <span className={styles.or}>OR</span>
+                    <span className={styles.or} style={{ display: isEdit ? 'none' : 'inline' }}>OR</span>
                     <input
                         type="file"
                         accept="image/*"
@@ -117,10 +118,10 @@ export default function CharacterForm({ initialData = {}, isEdit = false }) {
             </div>
 
             <div className={styles.actions}>
-                <button type="button" onClick={() => router.back()} className="btn btn-outline">
+                <button type="button" onClick={() => router.back()} className="btn btn-outline btn-sm">
                     Cancel
                 </button>
-                <button type="submit" className="btn btn-primary" disabled={loading}>
+                <button type="submit" className="btn btn-outline btn-sm" disabled={loading}>
                     {loading ? 'Saving...' : (isEdit ? 'Update Character' : 'Create Character')}
                 </button>
             </div>
